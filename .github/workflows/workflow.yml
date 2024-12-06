@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   build:
-    runs-on: GitHubSelfHosted-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: codebuild-GitHubSelfHosted-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - run: |
           echo "running on CodeBuild..."
