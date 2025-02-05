@@ -1,6 +1,7 @@
 name: Hello-world
 on:
   push:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: codebuild-GitHubSelfHosted-${{ github.run_id }}-${{ github.run_attempt }}
