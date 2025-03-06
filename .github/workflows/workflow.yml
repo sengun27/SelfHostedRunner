@@ -10,3 +10,9 @@ jobs:
           echo "running on CodeBuild..."
           echo "OS: $(uname -a)"
           aws sts get-caller-identity
+  build2:
+    runs-on: codebuild-GitHubSelfHostedRunner-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: |
+          echo "This is codebuild-GitHubSelfHostedRunner"
+          
